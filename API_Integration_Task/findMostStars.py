@@ -7,7 +7,7 @@ def findMostStars(username):
     resultsDict = {}
     jsonResponseLength = len(jsonResponse)
 
-    # For the length of the given repo, we loop thru each repo response and get the repository name, last updated date, and stars count
+    # For the length of the given response, we loop thru each repo response and get the repository name, last updated date, and stars count
     for i in range(jsonResponseLength):
         repoName = jsonResponse[i]['name']
         lastUpdatedDate = jsonResponse[i]['updated_at']
@@ -22,3 +22,4 @@ def findMostStars(username):
     # Sorts the results dictionary by stars count in descending order
     sortedResults = sorted(resultsDict.items(), key=lambda x: x[1]['starsCount'], reverse=True)
     return sortedResults
+
