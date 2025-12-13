@@ -15,7 +15,7 @@ try:
     sortedResults = findMostStars(username)
     storeRepoData(username, sortedResults)
 # Centralized error handling
-except ValueError as e: # Value error path (404)
+except ValueError as e: # Value error path (mapped from 404 error intentionally, because a 404 error is returned when a username is invalid)
     print(f'Error: {e}')
     exit(1)
 except ConnectionError as e: # Network connection error path
@@ -27,3 +27,4 @@ except requests.exceptions.HTTPError as e: # HTTP error path not 404
 except Exception as e: # Unexpected error path
     print(f'Unexpected error: {e}')
     exit(1)
+    exit(1
