@@ -27,4 +27,3 @@ except requests.exceptions.HTTPError as e: # HTTP error path not 404
 except Exception as e: # Unexpected error path
     print(f'Unexpected error: {e}')
     exit(1)
-    exit(1
