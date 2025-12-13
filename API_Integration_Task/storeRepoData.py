@@ -21,7 +21,7 @@ def storeRepoData(username, sortedResults):
             cursor.execute('''
                 INSERT INTO repos (repoName, lastUpdatedDate, starsCount)
                 VALUES (?, ?, ?)
-            ''', (repoName, data['lastUpdatedDate'], data['starsCount']))
+            ''', (repoName, data['lastUpdatedDate'], data['starsCount'])) # Parameterized queries prevent SQL injection attacks
         
         # Commits the changes to the database (connection closes automatically after this block)
         conn.commit()
@@ -36,4 +36,5 @@ def storeRepoData(username, sortedResults):
     if sortedResults:
         mostStarredRepo = sortedResults[0] # 0th index is the most starred repo because we sorted earlier.
         print(f"\nMost starred repo: {mostStarredRepo[0]} with {mostStarredRepo[1]['starsCount']} stars.")
+
 
