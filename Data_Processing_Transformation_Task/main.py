@@ -2,7 +2,7 @@ from totalSpendPerCustomer import totalSpendPerCustomer
 from top5CustomersByTotalSpend import top5CustomersByTotalSpend
 from writeToJson import writeToJson
 
-# Calculates spending for all customers in the csv file
+# Calculates spending for all customers in the csv file that is passed here, or will use csv file defined in totalSpendPerCustomer.py if nothing is passed here
 totalSpendingPerCustomer = totalSpendPerCustomer()
 
 # Gets the top 5 customers by total spend
