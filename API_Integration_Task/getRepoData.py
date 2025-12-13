@@ -9,7 +9,7 @@ def getRepoData(username):
         response.raise_for_status() # If any HTTP error gets caught here, it will skip down to the except blocks
         return response.json() # Returns the response from the GitHub API
     except requests.exceptions.HTTPError as e:
-        if response.status_code == 404: # If the user is not found on GitHub, error w/404
+        if response.status_code == 404: # If the user is not found on GitHub (error 404), we raise a ValueError
             raise ValueError(f'User "{username}" not found on GitHub')
         else: # If the GitHub API returns an HTTP error other than 404, error w/status code
             raise requests.exceptions.HTTPError(f'GitHub API returned status code {response.status_code}')
