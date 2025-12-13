@@ -1,4 +1,4 @@
-from getRepoData import getRepoData
+from getRepoData import getRepoData # Importing function needed for this to execute
 
 # Finds the most starred repository for a given GitHub username
 def findMostStars(username):
@@ -22,4 +22,5 @@ def findMostStars(username):
     # Sorts the results dictionary by stars count in descending order
     sortedResults = sorted(resultsDict.items(), key=lambda x: x[1]['starsCount'], reverse=True)
     return sortedResults
+
 
