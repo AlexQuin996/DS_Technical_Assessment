@@ -14,7 +14,7 @@ pip install pandas
 
 ## Running the Script
 
-1. Place your `transactions.csv` file one directory up from this folder (the script looks for `../transactions.csv`), or where ever you feel like really. I store it outside this folder for seperation of concern reasons, but you could hypotheically put it anywhere, just make sure you know the file address.
+1. Place your `transactions.csv` file one directory up from this folder (the script looks for `../transactions.csv`), or where ever you feel like. I store it outside this folder for seperation of concern reasons, but you could hypotheically put it anywhere, just make sure you know the file address, and update the parameter for totalSpendPerCustomer() in main.py
 
 2. Run the main script:
 
@@ -47,3 +47,4 @@ The results are saved to `top_customers.json` with the following format:
 - `top5CustomersByTotalSpend.py` - Filters to the top 5 customers
 - `writeToJson.py` - Writes the results to a formatted JSON file
 - `top_customers.json` - Formatted JSON file with final results after script runs
+
