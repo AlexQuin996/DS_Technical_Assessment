@@ -1,6 +1,6 @@
 # Data Processing & Transformation Task
 
-This script processes transaction data from a .csv file to find the total spending per customer as well top 5 customers by total spending and outputs the results to a JSON file.
+This script processes transaction data from a .csv file to find the top 5 customers by total spending and outputs the results to a JSON file.
 
 ## Setup
 
@@ -47,4 +47,5 @@ The results are saved to `top_customers.json` with the following format:
 - `top5CustomersByTotalSpend.py` - Filters to the top 5 customers
 - `writeToJson.py` - Writes the results to a formatted JSON file
 - `top_customers.json` - Formatted JSON file with final results after script runs
+
 
